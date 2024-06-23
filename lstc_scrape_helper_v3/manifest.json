@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "LSTC Instrument ID Extractor",
+    "version": "2.0",
+    "description": "Extracts instrument ID from LSTC instrument page",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "clipboardWrite"
+    ],
+    "action": {
+      "default_title": "LSTC Instrument ID Extractor"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
