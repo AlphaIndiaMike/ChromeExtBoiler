@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Instrument ID Extractor",
+    "version": "1.0",
+    "description": "Extracts instrument ID from showInstrumentInChart function",
+    "permissions": [
+      "activeTab",
+      "clipboardWrite"
+    ],
+    "browser_action": {
+      "default_title": "Extract Instrument ID"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
