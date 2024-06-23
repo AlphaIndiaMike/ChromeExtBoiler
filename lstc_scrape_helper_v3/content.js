@@ -22,7 +22,7 @@ function extractInstrumentInfo() {
     navigator.clipboard.writeText(jsonString).then(function() {
       alert('JSON data copied to clipboard:\n' + jsonString);
     }, function() {
-      alert('Failed to copy JSON data to clipboard.');
+      console.info('Failed to copy JSON data to clipboard. Maybe it is already there.');
     });
   } else {
     alert('No instrument ID found on this page.');
