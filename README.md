@@ -1,0 +1,2 @@
+# ChromeExtBoiler
+Chrome extensions boilerplate
